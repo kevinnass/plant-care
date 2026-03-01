@@ -1,5 +1,13 @@
 import { RecordModel } from 'pocketbase'
 
+// Collection names (prefixed for multi-project PocketBase)
+export const Collections = {
+  USERS: 'users',
+  PLANTS: 'pc_plants',
+  WATERING_SCHEDULES: 'pc_watering_schedules',
+  WATERING_LOGS: 'pc_watering_logs',
+} as const
+
 export interface User extends RecordModel {
   email: string
   avatar: string
